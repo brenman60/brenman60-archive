@@ -1,0 +1,129 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: normal;
+  color: #EDEDED;
+}
+
+#root {
+  margin-bottom: 150px;
+  font-size: 75%;
+}
+
+html {
+  background-color: #131313;
+  overflow-y: scroll;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#nav {
+  height: 50px;
+  background-color: #1D1D1D;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  list-style-type: none;
+  z-index: 100;
+  gap: clamp(10px, 0.5vw, 1.5vw);
+  white-space: nowrap;
+}
+
+.navLink {
+  color: #EDEDED;
+  padding-left: 35px;
+  padding-right: 35px;
+  align-content: center;
+  margin: 0px;
+  text-align: center;
+  text-decoration: none;
+  height: 100%;
+  font-size: 1.5em;
+  border-bottom: #33e48c;
+  border-bottom-style: solid;
+  border-bottom-width: 0px;
+}
+
+#nav .navLink:hover {
+  background-color: #3B3B3B;
+}
+
+#headerNav {
+  height: 50px;
+  width: 100%;
+  background-color: #1D1D1D;
+  display: flex;
+  align-items: center;
+  float: left;
+}
+
+.navHeader {
+  color: #EDEDED;
+  padding: 15px;
+  margin: 0px;
+  text-align: left;
+}
+
+#hamburgerNav {
+  display: none;
+}
+
+@media (min-width: 1250px) {
+  .navLink.active {
+    border-bottom-width: 3px;
+  }
+}
+@media (max-width: 1250px) {
+  #nav {
+    background-color: transparent;
+    display: inline;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    height: auto;
+    margin-top: 50px;
+    overflow: hidden;
+    border: none;
+    pointer-events: none;
+  }
+  .navLink {
+    display: block;
+    background-color: #313131;
+    z-index: 1;
+    border-width: 0px;
+    border: none;
+  }
+  #nav .navLink {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    left: 100vw;
+    opacity: 0%;
+    pointer-events: none;
+  }
+  #nav .navLink.visible {
+    left: 0;
+    opacity: 100%;
+    pointer-events: all;
+  }
+  #hamburgerNav {
+    display: flex;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 50px;
+    width: 50px;
+    aspect-ratio: 1/1;
+    font-size: 1.25em;
+    color: #EDEDED;
+    align-items: center;
+    justify-content: center;
+  }
+  #hamburgerNav:hover {
+    text-decoration: underline;
+  }
+}

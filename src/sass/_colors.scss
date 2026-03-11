@@ -1,0 +1,42 @@
+@use "sass:meta";
+@use "sass:string";
+@use "sass:list";
+
+$background1: #3B3B3B;
+$background2: #313131;
+$background3: #272727;
+$background4: #1D1D1D;
+$background5: #131313;
+$heading: #33e48c;
+$highlight: #a6e5a6;
+$error: #ee5541;
+$success: #47e094;
+$standout: #d6e047;
+$link: #548ed1;
+$text: #EDEDED;
+
+// Helper functions
+@function hex-to-dec($hex) {
+  $hex: meta.inspect($hex);
+  $hex: string.slice($hex, 2);
+  $r: string.slice($hex, 1, 2);
+  $g: string.slice($hex, 3, 4);
+  $b: string.slice($hex, 5, 6);
+
+  @return (
+    r: _hex-char-to-dec($r),
+    g: _hex-char-to-dec($g),
+    b: _hex-char-to-dec($b)
+  );
+}
+
+@function _hex-char-to-dec($hex) {
+  $chars: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9" "a" "b" "c" "d" "e" "f";
+  $first: string.slice($hex, 1, 1);
+  $second: string.slice($hex, 2, 2);
+  
+  $first-val: list.index($chars, string.to-lower-case($first)) - 1;
+  $second-val: list.index($chars, string.to-lower-case($second)) - 1;
+
+  @return $first-val * 16 + $second-val;
+}

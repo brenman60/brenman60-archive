@@ -1,0 +1,162 @@
+@use "sass:map";
+@use "colors.scss";
+
+.article {
+    display: grid;
+    column-gap: 25px;
+
+    width: 100%;
+    height: auto;
+    min-height: 125px;
+    padding: 15px;
+
+    border-radius: 4px;
+    background-color: colors.$background4;
+
+    cursor: pointer;
+
+    -webkit-box-shadow: inset 0 0 0 2px colors.$background3;
+    -moz-box-shadow: inset 0 0 0 2px colors.$background3;
+    box-shadow: inset 0 0 0 2px colors.$background3;
+
+    transition: background-color 0.15s ease-in, 
+    box-shadow 0.15s ease-in, -moz-box-shadow 0.15s ease-in, -webkit-box-shadow 0.15s ease-in;
+
+    &:hover {
+        -webkit-box-shadow: inset 0 0 0 1px colors.$background1;
+        -moz-box-shadow: inset 0 0 0 1px colors.$background1;
+        box-shadow: inset 0 0 0 1px colors.$background1;
+    }
+
+    & > div {
+        display: grid;
+        row-gap: 16px;
+        align-items: center;
+        height: auto;
+    }
+
+    // All of this here is so that if there is a cover image, it'll show differently from everything else on the left
+    & > div:first-child:has(.articleCover) {
+        grid-template-columns: auto 1fr auto;
+        column-gap: 16px;
+
+        & > .articleCover {
+            grid-column: 1;
+            grid-row-start: 1;
+            grid-row-end: 4;
+        }
+
+        & > .articleTitle {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row: 1;
+        }
+
+        & > .articleRating {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+
+        & > .articleDate {
+            grid-row: 1;
+        }
+    }
+
+    // Then if not, we can just show everything normally
+    & > div:first-child:not(:has(.articleCover)) {
+        grid-template-columns: 1fr auto;
+
+        & > .articleTitle {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row: 1;
+        }
+
+        & > .articleSummary {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row: 2;
+        }
+
+        & > .articleDate {
+            grid-column: 3;
+            grid-row: 1;
+        }
+    }
+}
+
+.articleCover {
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+    align-self: center;
+}
+
+.articleTitle {
+    display: flex;
+    width: fit-content;
+    margin: 0px;
+
+    font-size: 2.5em;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.articleSummary {
+    display: -webkit-box;
+    width: fit-content;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    font-size: 1em;
+}
+
+.articleRating {
+    font-size: 4em;
+    margin: 0px;
+
+    @for $i from 0 through 100 {
+        &.rating-#{$i} {
+            $percent: calc($i / 100);
+
+            $error-rgb: colors.hex-to-dec(colors.$error);
+            $success-rgb: colors.hex-to-dec(colors.$success);
+            $r: map.get($error-rgb, r) + (map.get($success-rgb, r) - map.get($error-rgb, r)) * $percent;
+            $g: map.get($error-rgb, g) + (map.get($success-rgb, g) - map.get($error-rgb, g)) * $percent;
+            $b: map.get($error-rgb, b) + (map.get($success-rgb, b) - map.get($error-rgb, b)) * $percent;
+
+            color: rgb($r, $g, $b);
+            text-shadow: 
+                0 0 5px rgba($r, $g, $b, 0.8),
+                0 0 10px rgba($r, $g, $b, 0.6),
+                0 0 15px rgba($r, $g, $b, 0.4);
+        }
+    }
+}
+
+.articleDate {
+    display: flex; 
+    float: right;
+    margin: 0px;
+
+    width: fit-content;
+    
+    align-self: baseline;
+}
+
+.articleTags {
+    display: flex;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+}

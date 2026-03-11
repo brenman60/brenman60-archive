@@ -1,0 +1,44 @@
+@use "colors.scss";
+
+#footer {
+    position: fixed;
+    z-index: 5;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    background-color: colors.$background4;
+    margin-top: 100px;
+    overflow: hidden;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+#footerIcons {
+    float: right;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+
+    &:nth-child(1) {
+        margin-right: 15px;
+    }
+}
+
+.footerIcon {
+    width: 30px;
+    height: auto;
+    object-fit: contain;
+    cursor: pointer;
+    z-index: 3;
+    padding: 5px;
+    border-radius: 5px;
+    border-color: rgba(colors.$text, 0.25);
+
+    transition: all 0.2s ease-in;
+    &:hover {
+        background-color: rgba(colors.$text, 0.15);
+        border-color: rgba(colors.$text, 1);
+        border-width: 1px;
+    }
+}

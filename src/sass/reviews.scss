@@ -1,0 +1,164 @@
+@use "colors.scss";
+
+#title {
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 5em;
+}
+
+#reviews {
+    margin: auto;
+    margin-top: 50px;
+    width: 50%;
+    display: flex;
+    gap: 25px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.review {
+    display: flex;
+    font-size: 1.5em;
+    cursor: pointer;
+    
+    padding: 10px;
+    border-radius: 5px;
+    background-color: colors.$background4;
+
+    transition: background-color 0.15s ease-in, 
+    box-shadow 0.15s ease-in, -moz-box-shadow 0.15s ease-in, -webkit-box-shadow 0.15s ease-in;
+
+    &.selected {
+        -webkit-box-shadow: inset 0 -5px 0 0 colors.$background3;
+        -moz-box-shadow: inset 0 -5px 0 0 colors.$background3;
+        box-shadow: inset 0 -5px 0 0 colors.$background3;
+    }
+
+    &.unselected {
+        -webkit-box-shadow: inset 0 -2px 0 0 colors.$background3;
+        -moz-box-shadow: inset 0 -2px 0 0 colors.$background3;
+        box-shadow: inset 0 -2px 0 0 colors.$background3;
+    }
+
+    &:hover {
+        background-color: colors.$background5;
+    }
+}
+
+#searchbar {
+    display: flex;
+    width: 50%;
+    height: 30px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 15px;
+
+    color: colors.$text;
+    background-color: colors.$background4;
+    border-radius: 5px;
+    border: none;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &:focus {
+        outline: none;
+    }
+
+    &::-webkit-search-cancel-button {
+        display: none;
+    }
+}
+
+#reviewArticlesContent {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: auto;
+    gap: 25px;
+}
+
+#reviewArticlesPagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    gap: 0px;
+}
+
+#pageInput {
+    background-color: colors.$background4;
+    color: colors.$text;
+    width: 45px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 2px;
+    padding: 10px 5px;
+    font-size: 1em;
+    text-align: center;
+
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+
+    -webkit-box-shadow: inset 0 0 0 1px colors.$background3;
+    -moz-box-shadow: inset 0 0 0 1px colors.$background3;
+    box-shadow: inset 0 0 0 1px colors.$background3;
+
+    transition: background-color 0.15s ease-in, 
+    box-shadow 0.15s ease-in, -moz-box-shadow 0.15s ease-in, -webkit-box-shadow 0.15s ease-in;
+
+    &:focus {
+        outline: none;
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    &::-moz-spin-down,
+    &::-moz-spin-up {
+        display: none;
+    }
+
+    &:hover {
+        -webkit-box-shadow: inset 0 0 0 1px colors.$background1;
+        -moz-box-shadow: inset 0 0 0 1px colors.$background1;
+        box-shadow: inset 0 0 0 1px colors.$background1;
+    }
+}
+
+.pageButton {
+    background-color: colors.$background4;
+    color: colors.$text;
+    border: none;
+    border-radius: 2px;
+    padding: 10px 15px;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 1em;
+    font-weight: bolder;
+    cursor: pointer;
+
+    -webkit-box-shadow: inset 0 0 0 1px colors.$background3;
+    -moz-box-shadow: inset 0 0 0 1px colors.$background3;
+    box-shadow: inset 0 0 0 1px colors.$background3;
+
+    transition: background-color 0.15s ease-in, 
+    box-shadow 0.15s ease-in, -moz-box-shadow 0.15s ease-in, -webkit-box-shadow 0.15s ease-in;
+
+    &:hover {
+        -webkit-box-shadow: inset 0 0 0 1px colors.$background1;
+        -moz-box-shadow: inset 0 0 0 1px colors.$background1;
+        box-shadow: inset 0 0 0 1px colors.$background1;
+    }
+}

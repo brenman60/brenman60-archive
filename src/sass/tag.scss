@@ -1,0 +1,9 @@
+@use "colors.scss";
+
+.tag {
+    font-size: 0.75em;
+
+    background-color: colors.$background1;
+    border: none;
+    border-radius: 1px;
+}
