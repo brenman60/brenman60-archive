@@ -188,9 +188,9 @@ export default function Article() {
             I don't know how great a story I could write for something like this could be even now, so back then I had no idea what I was doing, which resulted in some really awkward writing.
             As well as that, I Also Used To Write Like This With Every Word Capitalized For Some Reason???
           </p>} images={[
-          { src: "/articles/devChronicles/images/brennansMiniGame/1.png", alt: "Screenshot 1 of Brennan's Mini Game", caption: "Main lobby for choosing minigames" },
-          { src: "/articles/devChronicles/images/brennansMiniGame/2.png", alt: "Screenshot 2 of Brennan's Mini Game", caption: "TNT run minigame" },
-          { src: "/articles/devChronicles/images/brennansMiniGame/3.png", alt: "Screenshot 3 of Brennan's Mini Game", caption: "Puzzle room of escape room" },
+          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/brennansMiniGame/1.png`, alt: "Screenshot 1 of Brennan's Mini Game", caption: "Main lobby for choosing minigames" },
+          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/brennansMiniGame/2.png`, alt: "Screenshot 2 of Brennan's Mini Game", caption: "TNT run minigame" },
+          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/brennansMiniGame/3.png`, alt: "Screenshot 3 of Brennan's Mini Game", caption: "Puzzle room of escape room" },
           { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/brennansMiniGame/4.png`, alt: "Screenshot 4 of Brennan's Mini Game", caption: "Redstone and command blocks for escape room" },
           { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/brennansMiniGame/5.png`, alt: "Screenshot 5 of Brennan's Mini Game", caption: "Redstone and command blocks for murder mystery" },
           { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/brennansMiniGame/6.png`, alt: "Screenshot 6 of Brennan's Mini Game", caption: "Maps for murder mystery" },
