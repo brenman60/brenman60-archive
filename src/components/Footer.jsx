@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div id="footer">
       <div id="footerIcons">
-        <img className="footerIcon" onClick={() => window.open("https://github.com/brenman60/brenman60-Blog")} src={githubIcon} alt="GitHub" />
+        <img className="footerIcon" onClick={() => window.open("https://github.com/brenman60/brenman60-archive")} src={githubIcon} alt="GitHub" />
       </div>
     </div>
   );

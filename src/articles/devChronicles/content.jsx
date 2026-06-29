@@ -6,6 +6,9 @@ import RowTextImages from '../../components/articleComponents/RowTextImages';
 import RowImages from '../../components/articleComponents/RowImages';
 import RowSeparator from "../../components/articleComponents/RowSeparator";
 
+const BASE_URL = import.meta.env.BASE_URL;
+const ARTICLES_URL = `${BASE_URL}articles/devChronicles/images`;
+
 export default function Article() {
   const [headerImageIndex, setHeaderImageIndex] = useState(0);
 
@@ -18,14 +21,14 @@ export default function Article() {
   }, []);
   
   const headerImages = [
-    { src: `${import.meta.env.BASE_URL}articles/devChronicles/images/brennansMiniGame/5.png`, alt: "Screenshot of Brennan's Mini Game" },
-    { src: `${import.meta.env.BASE_URL}articles/devChronicles/images/theIslandOfFareo/1.png`, alt: "Screenshot of The Island of Fareo" },
-    { src: `${import.meta.env.BASE_URL}articles/devChronicles/images/forlorn/3.png`, alt: "Screenshot of Forlorn" },
-    { src: `${import.meta.env.BASE_URL}articles/devChronicles/images/ultimateArena/1.png`, alt: "Screenshot of Ultimate Arena" },
-    { src: `${import.meta.env.BASE_URL}articles/devChronicles/images/pigRiding2/3.png`, alt: "Screenshot of Pig Riding" },
-    { src: `${import.meta.env.BASE_URL}articles/devChronicles/images/theInternet/1.png`, alt: "Screenshot of The Internet" },
-    { src: `${import.meta.env.BASE_URL}articles/devChronicles/images/galaxySprint/2.png`, alt: "Screenshot of Galaxy Sprint" },
-    { src: `${import.meta.env.BASE_URL}articles/devChronicles/images/darkening/1.png`, alt: "Screenshot of Darkening" }
+    { src: `${ARTICLES_URL}/brennansMiniGame/5.png`, alt: "Screenshot of Brennan's Mini Game" },
+    { src: `${ARTICLES_URL}/theIslandOfFareo/1.png`, alt: "Screenshot of The Island of Fareo" },
+    { src: `${ARTICLES_URL}/forlorn/3.png`, alt: "Screenshot of Forlorn" },
+    { src: `${ARTICLES_URL}/ultimateArena/1.png`, alt: "Screenshot of Ultimate Arena" },
+    { src: `${ARTICLES_URL}/pigRiding2/3.png`, alt: "Screenshot of Pig Riding" },
+    { src: `${ARTICLES_URL}/theInternet/1.png`, alt: "Screenshot of The Internet" },
+    { src: `${ARTICLES_URL}/galaxySprint/2.png`, alt: "Screenshot of Galaxy Sprint" },
+    { src: `${ARTICLES_URL}/darkening/1.png`, alt: "Screenshot of Darkening" }
   ];
 
   return (
@@ -92,10 +95,10 @@ export default function Article() {
 
             That aside, you'll see in many of these worlds, that the command block and redstone spaghetti looking wires are actually quite cool looking. I haven't looked it over, so I can probably guess that much of it is overcomplicated and unorganized, but cool nonetheless.
           </p>} images={[
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/deathRunMinigameWorld/1.png`, alt: "Screenshot 1 of death run/minigame world", caption: "Command block work for the death run minigame" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/deathRunMinigameWorld/2.png`, alt: "Screenshot 2 of death run/minigame world", caption: "Lobby area of the death run minigame" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/deathRunMinigameWorld/3.png`, alt: "Screenshot 3 of death run/minigame world", caption: "An item sorter for murderer and sheriff selection in murder mystery" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/deathRunMinigameWorld/6.png`, alt: "Screenshot 4 of death run/minigame world", caption: "Lobby of the murder mystery minigame" }
+          { src: `${ARTICLES_URL}/deathRunMinigameWorld/1.png`, alt: "Screenshot 1 of death run/minigame world", caption: "Command block work for the death run minigame" },
+          { src: `${ARTICLES_URL}/deathRunMinigameWorld/2.png`, alt: "Screenshot 2 of death run/minigame world", caption: "Lobby area of the death run minigame" },
+          { src: `${ARTICLES_URL}/deathRunMinigameWorld/3.png`, alt: "Screenshot 3 of death run/minigame world", caption: "An item sorter for murderer and sheriff selection in murder mystery" },
+          { src: `${ARTICLES_URL}/deathRunMinigameWorld/6.png`, alt: "Screenshot 4 of death run/minigame world", caption: "Lobby of the murder mystery minigame" }
         ]} imageRight={true} />
 
         <p className="subsectionHeading">2 - Break In!</p>
@@ -108,10 +111,10 @@ export default function Article() {
             The game doesn't work anymore (at least on the ported version on my PC), since the structure blocks are set to load from memory and not from disk, so I couldn't really play this one.
             However, out of all these worlds, this one was probably the closest to a complete and possibly fairly enjoyable one.
           </p>} images={[
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/breakIn/4.png`, alt: "Screenshot 1 of Break In!", caption: "Lobby area" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/breakIn/3.png`, alt: "Screenshot 2 of Break In!", caption: "Outside of the house map" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/breakIn/2.png`, alt: "Screenshot 3 of Break In!", caption: "Command blocks controlling start and end of the round" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/breakIn/1.png`, alt: "Screenshot 4 of Break In!", caption: "Section of the inside of the house map" }
+          { src: `${ARTICLES_URL}/breakIn/4.png`, alt: "Screenshot 1 of Break In!", caption: "Lobby area" },
+          { src: `${ARTICLES_URL}/breakIn/3.png`, alt: "Screenshot 2 of Break In!", caption: "Outside of the house map" },
+          { src: `${ARTICLES_URL}/breakIn/2.png`, alt: "Screenshot 3 of Break In!", caption: "Command blocks controlling start and end of the round" },
+          { src: `${ARTICLES_URL}/breakIn/1.png`, alt: "Screenshot 4 of Break In!", caption: "Section of the inside of the house map" }
         ]} imageRight={true} />
 
         <p className="subsectionHeading">3 - U r Super</p>
@@ -123,8 +126,8 @@ export default function Article() {
 
             Despite having nothing notable to say about this one, it actually is the world with the best memories I have from this time period.
           </p>} images={[
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/urSuper/1.png`, alt: "Screenshot 1 of U r Super", caption: "Main arena map" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/urSuper/2.png`, alt: "Screenshot 2 of U s Super", caption: "Class selection area" }
+          { src: `${ARTICLES_URL}/urSuper/1.png`, alt: "Screenshot 1 of U r Super", caption: "Main arena map" },
+          { src: `${ARTICLES_URL}/urSuper/2.png`, alt: "Screenshot 2 of U s Super", caption: "Class selection area" }
         ]} imageRight={true} />
 
         <p className="subsectionHeading">4 - Ultimate Arena</p>
@@ -141,11 +144,11 @@ export default function Article() {
             Like I said, this one never made it very far, in fact, it barely made it anywhere at all. That loot box system was pretty much all it had for it.
             One of my friends started an "Atlantis" map, which was never fully finished, and the actual gameplay I don't think was ever even started.
           </p>} images={[
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/ultimateArena/4.png`, alt: "Screenshot 1 of Ultimate Arena", caption: "Aforementioned random number and rarity armor stand system" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/ultimateArena/1.png`, alt: "Screenshot 2 of Ultimate Arena", caption: "Command block and hopper system for delivering class unlocks to the current loot box" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/ultimateArena/3.png`, alt: "Screenshot 3 of Ultimate Arena", caption: "Loot box unlocking room" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/ultimateArena/2.png`, alt: "Screenshot 4 of Ultimate Arena", caption: "Command block mess for the loot box unlocking" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/ultimateArena/5.png`, alt: "Screenshot 5 of Ultimate Arena", caption: "The unfinished Atlantis map" },
+          { src: `${ARTICLES_URL}/ultimateArena/4.png`, alt: "Screenshot 1 of Ultimate Arena", caption: "Aforementioned random number and rarity armor stand system" },
+          { src: `${ARTICLES_URL}/ultimateArena/1.png`, alt: "Screenshot 2 of Ultimate Arena", caption: "Command block and hopper system for delivering class unlocks to the current loot box" },
+          { src: `${ARTICLES_URL}/ultimateArena/3.png`, alt: "Screenshot 3 of Ultimate Arena", caption: "Loot box unlocking room" },
+          { src: `${ARTICLES_URL}/ultimateArena/2.png`, alt: "Screenshot 4 of Ultimate Arena", caption: "Command block mess for the loot box unlocking" },
+          { src: `${ARTICLES_URL}/ultimateArena/5.png`, alt: "Screenshot 5 of Ultimate Arena", caption: "The unfinished Atlantis map" },
         ]} imageRight={true} />
 
         <p className="subsectionHeading">5 - ____ & Brenman60's Towers</p>
@@ -160,11 +163,11 @@ export default function Article() {
             <br /><br />
             There's nothing really notable to say about this world, so let's just move on.
           </p>} images={[
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/brenman60Towers/1.png`, alt: "Screenshot 1 of ____ & Brenman60's Towers", caption: "Tower selection lobby" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/brenman60Towers/2.png`, alt: "Screenshot 2 of ____ & Brenman60's Towers", caption: "Tutorial" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/brenman60Towers/3.png`, alt: "Screenshot 3 of ____ & Brenman60's Towers", caption: "The Color Tower" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/brenman60Towers/4.png`, alt: "Screenshot 4 of ____ & Brenman60's Towers", caption: "The Tower of Hell" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/brenman60Towers/5.png`, alt: "Screenshot 5 of ____ & Brenman60's Towers", caption: "Some command blocks for general functionality" },
+          { src: `${ARTICLES_URL}/brenman60Towers/1.png`, alt: "Screenshot 1 of ____ & Brenman60's Towers", caption: "Tower selection lobby" },
+          { src: `${ARTICLES_URL}/brenman60Towers/2.png`, alt: "Screenshot 2 of ____ & Brenman60's Towers", caption: "Tutorial" },
+          { src: `${ARTICLES_URL}/brenman60Towers/3.png`, alt: "Screenshot 3 of ____ & Brenman60's Towers", caption: "The Color Tower" },
+          { src: `${ARTICLES_URL}/brenman60Towers/4.png`, alt: "Screenshot 4 of ____ & Brenman60's Towers", caption: "The Tower of Hell" },
+          { src: `${ARTICLES_URL}/brenman60Towers/5.png`, alt: "Screenshot 5 of ____ & Brenman60's Towers", caption: "Some command blocks for general functionality" },
         ]} imageRight={true} />
 
         <p className="subsectionHeading">6 - Brennan's Mini Game</p>
@@ -188,14 +191,14 @@ export default function Article() {
             I don't know how great a story I could write for something like this could be even now, so back then I had no idea what I was doing, which resulted in some really awkward writing.
             As well as that, I Also Used To Write Like This With Every Word Capitalized For Some Reason???
           </p>} images={[
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/brennansMiniGame/1.png`, alt: "Screenshot 1 of Brennan's Mini Game", caption: "Main lobby for choosing minigames" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/brennansMiniGame/2.png`, alt: "Screenshot 2 of Brennan's Mini Game", caption: "TNT run minigame" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/brennansMiniGame/3.png`, alt: "Screenshot 3 of Brennan's Mini Game", caption: "Puzzle room of escape room" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/brennansMiniGame/4.png`, alt: "Screenshot 4 of Brennan's Mini Game", caption: "Redstone and command blocks for escape room" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/brennansMiniGame/5.png`, alt: "Screenshot 5 of Brennan's Mini Game", caption: "Redstone and command blocks for murder mystery" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/brennansMiniGame/6.png`, alt: "Screenshot 6 of Brennan's Mini Game", caption: "Maps for murder mystery" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/brennansMiniGame/7.png`, alt: "Screenshot 7 of Brennan's Mini Game", caption: "Lobby for murder mystery" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/brennansMiniGame/8.png`, alt: "Screenshot 8 of Brennan's Mini Game", caption: "Redstone and command blocks for TNT run" },
+          { src: `${ARTICLES_URL}/brennansMiniGame/1.png`, alt: "Screenshot 1 of Brennan's Mini Game", caption: "Main lobby for choosing minigames" },
+          { src: `${ARTICLES_URL}/brennansMiniGame/2.png`, alt: "Screenshot 2 of Brennan's Mini Game", caption: "TNT run minigame" },
+          { src: `${ARTICLES_URL}/brennansMiniGame/3.png`, alt: "Screenshot 3 of Brennan's Mini Game", caption: "Puzzle room of escape room" },
+          { src: `${ARTICLES_URL}/brennansMiniGame/4.png`, alt: "Screenshot 4 of Brennan's Mini Game", caption: "Redstone and command blocks for escape room" },
+          { src: `${ARTICLES_URL}/brennansMiniGame/5.png`, alt: "Screenshot 5 of Brennan's Mini Game", caption: "Redstone and command blocks for murder mystery" },
+          { src: `${ARTICLES_URL}/brennansMiniGame/6.png`, alt: "Screenshot 6 of Brennan's Mini Game", caption: "Maps for murder mystery" },
+          { src: `${ARTICLES_URL}/brennansMiniGame/7.png`, alt: "Screenshot 7 of Brennan's Mini Game", caption: "Lobby for murder mystery" },
+          { src: `${ARTICLES_URL}/brennansMiniGame/8.png`, alt: "Screenshot 8 of Brennan's Mini Game", caption: "Redstone and command blocks for TNT run" },
         ]} imageRight={true} />
 
         <RowSeparator spacing={"150px"} />
@@ -254,8 +257,8 @@ export default function Article() {
             And as for technicality, it was created during the very very beginning of when I started learning Roblox development, so the code is not very impressive at all.
             As far as I can tell that timer is also pointless. It does nothing when it hits 0. Which is admittedly pretty funny.
           </p>} images={[
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/sittingSimulator/1.png`, alt: "Screenshot 1 of Sitting Simulator", caption: "Base map with timer" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/sittingSimulator/2.png`, alt: "Screenshot 2 of Sitting Simulator", caption: "Multiplayer server with multiple desks and giant furniture hanging" }
+          { src: `${ARTICLES_URL}/sittingSimulator/1.png`, alt: "Screenshot 1 of Sitting Simulator", caption: "Base map with timer" },
+          { src: `${ARTICLES_URL}/sittingSimulator/2.png`, alt: "Screenshot 2 of Sitting Simulator", caption: "Multiplayer server with multiple desks and giant furniture hanging" }
         ]} imageRight={true} />
 
         <p className="subsectionHeading">Chapter 2 - <a href="https://www.roblox.com/games/5081935005/Turtle-Plazas-Parkour-Practice" target="_blank">Turtle Plaza's Parkour Practice</a></p>
@@ -267,10 +270,10 @@ export default function Article() {
             I think I started this game pretty much because the programming side of it was pretty easy, especially considering I actually don't really like parkour in many games.
             There's nothing really notable about this game though. It features that Roblox stud texture on every surface and I remember making it a point to have everything symmetrical in terms of those studs, but that's about it.
           </p>} images={[
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/turtlePlazasParkourPractice/4.png`, alt: "Screenshot 1 of Turtle Plaza's Parkour Practice", caption: "Main lobby area, with me holding... my head?" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/turtlePlazasParkourPractice/1.png`, alt: "Screenshot 2 of Turtle Plaza's Parkour Practice", caption: "Lines area" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/turtlePlazasParkourPractice/2.png`, alt: "Screenshot 3 of Turtle Plaza's Parkour Practice", caption: "Wraps area" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/turtlePlazasParkourPractice/3.png`, alt: "Screenshot 4 of Turtle Plaza's Parkour Practice", caption: "Entire map" }
+          { src: `${ARTICLES_URL}/turtlePlazasParkourPractice/4.png`, alt: "Screenshot 1 of Turtle Plaza's Parkour Practice", caption: "Main lobby area, with me holding... my head?" },
+          { src: `${ARTICLES_URL}/turtlePlazasParkourPractice/1.png`, alt: "Screenshot 2 of Turtle Plaza's Parkour Practice", caption: "Lines area" },
+          { src: `${ARTICLES_URL}/turtlePlazasParkourPractice/2.png`, alt: "Screenshot 3 of Turtle Plaza's Parkour Practice", caption: "Wraps area" },
+          { src: `${ARTICLES_URL}/turtlePlazasParkourPractice/3.png`, alt: "Screenshot 4 of Turtle Plaza's Parkour Practice", caption: "Entire map" }
         ]} imageRight={true} />
 
         <p className="subsectionHeading">Chapter 3 - <a href="https://www.roblox.com/games/5136063715/Scripting-Warehouse" target="_blank">Scripting Warehouse</a></p>
@@ -280,10 +283,10 @@ export default function Article() {
             Judging by the dates in-game, it seems like I worked on it for about 2 days because moving on. Which honestly was probably the best thing to do. 
             Although it's an interesting idea to have a game like this, it would soon become a pain and more of a chore to display things here instead of just making new projects, so it's no wonder I moved on so quickly.
           </p>} images={[
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/scriptingWarehouse/1.png`, alt: "Screenshot 1 of Scripting Warehouse", caption: "Simple about UI" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/scriptingWarehouse/2.png`, alt: "Screenshot 2 of Scripting Warehouse", caption: "Light toggle exhibit" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/scriptingWarehouse/3.png`, alt: "Screenshot 3 of Scripting Warehouse", caption: "Block spawner exhibit" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/scriptingWarehouse/4.png`, alt: "Screenshot 4 of Scripting Warehouse", caption: "Shape changing exhibit" }
+          { src: `${ARTICLES_URL}/scriptingWarehouse/1.png`, alt: "Screenshot 1 of Scripting Warehouse", caption: "Simple about UI" },
+          { src: `${ARTICLES_URL}/scriptingWarehouse/2.png`, alt: "Screenshot 2 of Scripting Warehouse", caption: "Light toggle exhibit" },
+          { src: `${ARTICLES_URL}/scriptingWarehouse/3.png`, alt: "Screenshot 3 of Scripting Warehouse", caption: "Block spawner exhibit" },
+          { src: `${ARTICLES_URL}/scriptingWarehouse/4.png`, alt: "Screenshot 4 of Scripting Warehouse", caption: "Shape changing exhibit" }
         ]} imageRight={true} />
 
         <p className="subsectionHeading">Chapter 4 - <a href="https://www.roblox.com/games/5366170181/MainServer" target="_blank">MainServer</a></p>
@@ -292,8 +295,8 @@ export default function Article() {
             This was a super experimental project and it pretty much never made it past a title screen. One of my favorite games when I was younger was <i>Kirby's Return to Dreamland</i> on the Nintendo Wii, and I believe this game was created solely inspired by that.
             I think I realized I was out of my league once I tried making any actual gameplay though, as the only thing it has is a player which faces the direction of the mouse, and a green thing which follows the player but does nothing to you.
           </p>} images={[
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/mainServer/1.png`, alt: "Screenshot 1 of MainServer", caption: "The title screen (I was clearly quite the English prodigy at the time)" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/mainServer/2.png`, alt: "Screenshot 2 of MainServer", caption: "The only section of map featuring green guy and my entirely white player" }
+          { src: `${ARTICLES_URL}/mainServer/1.png`, alt: "Screenshot 1 of MainServer", caption: "The title screen (I was clearly quite the English prodigy at the time)" },
+          { src: `${ARTICLES_URL}/mainServer/2.png`, alt: "Screenshot 2 of MainServer", caption: "The only section of map featuring green guy and my entirely white player" }
         ]} imageRight={true} />
 
         <RowSeparator spacing={"50px"} />
@@ -321,12 +324,12 @@ export default function Article() {
             <br /><br />
             Secondly, everything else in the game is pretty much pointless. I never developed the game enough for anything to matter. There's mechanics like a super simple quest (I actually forget what it is since I can't do it again), and the only other notable mechanic is how you can mine gold for coins, which again, does nothing because you can't do anything with coins.
           </p>} images={[
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/pigRiding1/1.png`, alt: "Screenshot 1 of Pig Riding! 🐷", caption: "Carrot on a Stick item" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/pigRiding1/2.png`, alt: "Screenshot 2 of Pig Riding! 🐷", caption: "Doing the game title" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/pigRiding1/3.png`, alt: "Screenshot 3 of Pig Riding! 🐷", caption: "Mining gold ore mechanic (I have no idea why I called it health...)" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/pigRiding1/4.png`, alt: "Screenshot 4 of Pig Riding! 🐷", caption: "NPC interaction" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/pigRiding1/5.png`, alt: "Screenshot 5 of Pig Riding! 🐷", caption: "Selling gold ore UI" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/pigRiding1/6.png`, alt: "Screenshot 6 of Pig Riding! 🐷", caption: "Barn area" }
+          { src: `${ARTICLES_URL}/pigRiding1/1.png`, alt: "Screenshot 1 of Pig Riding! 🐷", caption: "Carrot on a Stick item" },
+          { src: `${ARTICLES_URL}/pigRiding1/2.png`, alt: "Screenshot 2 of Pig Riding! 🐷", caption: "Doing the game title" },
+          { src: `${ARTICLES_URL}/pigRiding1/3.png`, alt: "Screenshot 3 of Pig Riding! 🐷", caption: "Mining gold ore mechanic (I have no idea why I called it health...)" },
+          { src: `${ARTICLES_URL}/pigRiding1/4.png`, alt: "Screenshot 4 of Pig Riding! 🐷", caption: "NPC interaction" },
+          { src: `${ARTICLES_URL}/pigRiding1/5.png`, alt: "Screenshot 5 of Pig Riding! 🐷", caption: "Selling gold ore UI" },
+          { src: `${ARTICLES_URL}/pigRiding1/6.png`, alt: "Screenshot 6 of Pig Riding! 🐷", caption: "Barn area" }
         ]} imageRight={true} />
 
         <p className="subsectionHeading">Chapter 6 - <a href="https://www.roblox.com/games/5853591308/pog" target="_blank">pog</a></p>
@@ -335,8 +338,8 @@ export default function Article() {
             I have no idea what the context was for the name. But this one is super simple and we basically went over it already. It's just a slightly more advanced version of "MainServer", this time with UI and some different graphics.
             There's nothing to really mention here, I just wanted to show that it existed, so I'll move on.
           </p>} images={[
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/pog/1.png`, alt: "Screenshot 1 of pog", caption: "Save selection screen" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/pog/2.png`, alt: "Screenshot 2 of pog", caption: "Main area with the green guy once again" }
+          { src: `${ARTICLES_URL}/pog/1.png`, alt: "Screenshot 1 of pog", caption: "Save selection screen" },
+          { src: `${ARTICLES_URL}/pog/2.png`, alt: "Screenshot 2 of pog", caption: "Main area with the green guy once again" }
         ]} imageRight={true} />
 
         <RowSeparator spacing={"50px"} />
@@ -363,10 +366,10 @@ export default function Article() {
             <br /><br />
             Once again I don't really have anything notable to say about this one. It's the precursor to another game I'll be showing soon, however.
           </p>} images={[
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/soulCrushingJobSimulator/1.png`, alt: "Screenshot 1 of Soul Crushing Job Simulator", caption: "Dialogue after joining the game" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/soulCrushingJobSimulator/2.png`, alt: "Screenshot 2 of Soul Crushing Job Simulator", caption: "Main gameplay (which was just you having to copy whatever the text was)" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/soulCrushingJobSimulator/3.png`, alt: "Screenshot 3 of Soul Crushing Job Simulator", caption: "UI of the computer desktop" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/soulCrushingJobSimulator/4.png`, alt: "Screenshot 4 of Soul Crushing Job Simulator", caption: "Computer logging in UI" }
+          { src: `${ARTICLES_URL}/soulCrushingJobSimulator/1.png`, alt: "Screenshot 1 of Soul Crushing Job Simulator", caption: "Dialogue after joining the game" },
+          { src: `${ARTICLES_URL}/soulCrushingJobSimulator/2.png`, alt: "Screenshot 2 of Soul Crushing Job Simulator", caption: "Main gameplay (which was just you having to copy whatever the text was)" },
+          { src: `${ARTICLES_URL}/soulCrushingJobSimulator/3.png`, alt: "Screenshot 3 of Soul Crushing Job Simulator", caption: "UI of the computer desktop" },
+          { src: `${ARTICLES_URL}/soulCrushingJobSimulator/4.png`, alt: "Screenshot 4 of Soul Crushing Job Simulator", caption: "Computer logging in UI" }
         ]} imageRight={true} />
 
         <p className="subsectionHeading">Chapter 8 - <a href="https://www.roblox.com/games/5985816473/Pig-Riding" target="_blank">Pig Riding</a></p>
@@ -385,14 +388,14 @@ export default function Article() {
             Like I mentioned, this game's plans were never acted on, but that doesn't mean they weren't well thought out. I recall coming up with various ideas and either building upon certain ones or shooting them down as I recognized whether or not they fit with what I was going for.
             Knowing which ideas are realistic towards the vision of your game is just as important as how they're implemented.
           </p>} images={[
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/pigRiding2/8.png`, alt: "Screenshot 1 of Pig Riding", caption: "Starter area with the default pig model" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/pigRiding2/2.png`, alt: "Screenshot 2 of Pig Riding", caption: "Player farm filled with crops" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/pigRiding2/3.png`, alt: "Screenshot 3 of Pig Riding", caption: "Player farm shop" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/pigRiding2/4.png`, alt: "Screenshot 4 of Pig Riding", caption: "Unlockable bunny" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/pigRiding2/5.png`, alt: "Screenshot 5 of Pig Riding", caption: "Doing the game title" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/pigRiding2/6.png`, alt: "Screenshot 6 of Pig Riding", caption: "Factory UI" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/pigRiding2/7.png`, alt: "Screenshot 7 of Pig Riding", caption: "Shop UI" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/pigRiding2/1.png`, alt: "Screenshot 8 of Pig Riding", caption: "Plant Seed UI" }
+          { src: `${ARTICLES_URL}/pigRiding2/8.png`, alt: "Screenshot 1 of Pig Riding", caption: "Starter area with the default pig model" },
+          { src: `${ARTICLES_URL}/pigRiding2/2.png`, alt: "Screenshot 2 of Pig Riding", caption: "Player farm filled with crops" },
+          { src: `${ARTICLES_URL}/pigRiding2/3.png`, alt: "Screenshot 3 of Pig Riding", caption: "Player farm shop" },
+          { src: `${ARTICLES_URL}/pigRiding2/4.png`, alt: "Screenshot 4 of Pig Riding", caption: "Unlockable bunny" },
+          { src: `${ARTICLES_URL}/pigRiding2/5.png`, alt: "Screenshot 5 of Pig Riding", caption: "Doing the game title" },
+          { src: `${ARTICLES_URL}/pigRiding2/6.png`, alt: "Screenshot 6 of Pig Riding", caption: "Factory UI" },
+          { src: `${ARTICLES_URL}/pigRiding2/7.png`, alt: "Screenshot 7 of Pig Riding", caption: "Shop UI" },
+          { src: `${ARTICLES_URL}/pigRiding2/1.png`, alt: "Screenshot 8 of Pig Riding", caption: "Plant Seed UI" }
         ]} imageRight={true} />
 
         <p className="subsectionHeading">Chapter 9 - <a href="https://www.roblox.com/games/6340559226/The-Internet-1-1" target="_blank">The Internet</a></p>
@@ -415,12 +418,12 @@ export default function Article() {
             <br /><br />
             Overall, this game was definitely a challenge to develop and pretty fun at that, yet not really my proudest work.
           </p>} images={[
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/theInternet/1.png`, alt: "Screenshot 1 of The Internet", caption: "Map area" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/theInternet/2.png`, alt: "Screenshot 2 of The Internet", caption: "Computer desktop UI" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/theInternet/6.png`, alt: "Screenshot 3 of The Internet", caption: "Website navigation UI" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/theInternet/5.png`, alt: "Screenshot 4 of The Internet", caption: "Website editor UI" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/theInternet/4.png`, alt: "Screenshot 5 of The Internet", caption: "Website search UI" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/theInternet/3.png`, alt: "Screenshot 6 of The Internet", caption: "Website UI" }
+          { src: `${ARTICLES_URL}/theInternet/1.png`, alt: "Screenshot 1 of The Internet", caption: "Map area" },
+          { src: `${ARTICLES_URL}/theInternet/2.png`, alt: "Screenshot 2 of The Internet", caption: "Computer desktop UI" },
+          { src: `${ARTICLES_URL}/theInternet/6.png`, alt: "Screenshot 3 of The Internet", caption: "Website navigation UI" },
+          { src: `${ARTICLES_URL}/theInternet/5.png`, alt: "Screenshot 4 of The Internet", caption: "Website editor UI" },
+          { src: `${ARTICLES_URL}/theInternet/4.png`, alt: "Screenshot 5 of The Internet", caption: "Website search UI" },
+          { src: `${ARTICLES_URL}/theInternet/3.png`, alt: "Screenshot 6 of The Internet", caption: "Website UI" }
         ]} imageRight={true} />
 
         <p className="subsectionHeading">Chapter 10 - <a href="https://www.roblox.com/games/6752791668/The-Island-of-Fareo-Discontinued-on-Roblox" target="_blank">The Island of Fareo</a></p>
@@ -446,14 +449,14 @@ export default function Article() {
             This game had one of the biggest long lasting effects on me personally though, with it inspiring many other ideas for projects further on.
             Overall, I found the time I worked on this game to be up there as some of the most enjoyable time that I've spent developing something, and for that I consider this to be one of my favorite projects to date.
           </p>} images={[
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/theIslandOfFareo/1.png`, alt: "Screenshot 1 of The Island of Fareo", caption: "Main spawn and shopkeeping area" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/theIslandOfFareo/2.png`, alt: "Screenshot 2 of The Island of Fareo", caption: "Biome which was heavily inspired by the Sunken Sea from Terraria's Calamity Mod" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/theIslandOfFareo/3.png`, alt: "Screenshot 3 of The Island of Fareo", caption: "Angler fish enemy biting my leg" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/theIslandOfFareo/4.png`, alt: "Screenshot 4 of The Island of Fareo", caption: "The shopkeeper you buy corruption related items from" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/theIslandOfFareo/5.png`, alt: "Screenshot 5 of The Island of Fareo", caption: "Navigating the water with a dinghy" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/theIslandOfFareo/6.png`, alt: "Screenshot 6 of The Island of Fareo", caption: "The shopkeeper you sell found artifacts to" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/theIslandOfFareo/7.png`, alt: "Screenshot 7 of The Island of Fareo", caption: "The UI for unlocked artifacts you find throughout the world" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/theIslandOfFareo/8.png`, alt: "Screenshot 8 of The Island of Fareo", caption: "The shopkeeper you buy upgrades and tools from" },
+          { src: `${ARTICLES_URL}/theIslandOfFareo/1.png`, alt: "Screenshot 1 of The Island of Fareo", caption: "Main spawn and shopkeeping area" },
+          { src: `${ARTICLES_URL}/theIslandOfFareo/2.png`, alt: "Screenshot 2 of The Island of Fareo", caption: "Biome which was heavily inspired by the Sunken Sea from Terraria's Calamity Mod" },
+          { src: `${ARTICLES_URL}/theIslandOfFareo/3.png`, alt: "Screenshot 3 of The Island of Fareo", caption: "Angler fish enemy biting my leg" },
+          { src: `${ARTICLES_URL}/theIslandOfFareo/4.png`, alt: "Screenshot 4 of The Island of Fareo", caption: "The shopkeeper you buy corruption related items from" },
+          { src: `${ARTICLES_URL}/theIslandOfFareo/5.png`, alt: "Screenshot 5 of The Island of Fareo", caption: "Navigating the water with a dinghy" },
+          { src: `${ARTICLES_URL}/theIslandOfFareo/6.png`, alt: "Screenshot 6 of The Island of Fareo", caption: "The shopkeeper you sell found artifacts to" },
+          { src: `${ARTICLES_URL}/theIslandOfFareo/7.png`, alt: "Screenshot 7 of The Island of Fareo", caption: "The UI for unlocked artifacts you find throughout the world" },
+          { src: `${ARTICLES_URL}/theIslandOfFareo/8.png`, alt: "Screenshot 8 of The Island of Fareo", caption: "The shopkeeper you buy upgrades and tools from" },
         ]} imageRight={true} />
 
         <RowSeparator spacing={"150px"} />
@@ -480,8 +483,8 @@ export default function Article() {
             The main inspiration for this was <a href="https://www.coolmathgames.com/0-awesome-tanks-2" target="_blank"><i>Awesome Tanks 2</i></a> from Coolmath Games.
             As you'll see later, this project served as the predecessor to something much much bigger.
           </p>} images={[
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/tankWars/1.png`, alt: "Screenshot 1 of Tank Wars", caption: "Player spawn area with breakable crates" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/tankWars/2.png`, alt: "Screenshot 2 of Tank Wars", caption: "Player being shot at by purple enemy tank" }
+          { src: `${ARTICLES_URL}/tankWars/1.png`, alt: "Screenshot 1 of Tank Wars", caption: "Player spawn area with breakable crates" },
+          { src: `${ARTICLES_URL}/tankWars/2.png`, alt: "Screenshot 2 of Tank Wars", caption: "Player being shot at by purple enemy tank" }
         ]} imageRight={true} />
 
         <p className="subsectionHeading">Installment 2 - Galaxy Sprint</p>
@@ -516,10 +519,10 @@ export default function Article() {
             <br /><br />
             I have really no clue if I truly want to remake this game or anything. Recently, I've had some promising ideas for what that sequel game could be, but I've struggled getting any of those ideas set in stone so I suppose we will see.
           </p>} images={[
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/galaxySprint/2.png`, alt: "Screenshot 2 of Galaxy Sprint", caption: "Main Menu UI" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/galaxySprint/3.png`, alt: "Screenshot 3 of Galaxy Sprint", caption: "First map level selection" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/galaxySprint/4.png`, alt: "Screenshot 4 of Galaxy Sprint", caption: "Trail shop UI" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/galaxySprint/5.png`, alt: "Screenshot 5 of Galaxy Sprint", caption: "Main gameplay" }
+          { src: `${ARTICLES_URL}/galaxySprint/2.png`, alt: "Screenshot 2 of Galaxy Sprint", caption: "Main Menu UI" },
+          { src: `${ARTICLES_URL}/galaxySprint/3.png`, alt: "Screenshot 3 of Galaxy Sprint", caption: "First map level selection" },
+          { src: `${ARTICLES_URL}/galaxySprint/4.png`, alt: "Screenshot 4 of Galaxy Sprint", caption: "Trail shop UI" },
+          { src: `${ARTICLES_URL}/galaxySprint/5.png`, alt: "Screenshot 5 of Galaxy Sprint", caption: "Main gameplay" }
         ]} imageRight={true} />
 
         <p className="subsectionHeading">Installment 3 - Darkening</p>
@@ -545,10 +548,10 @@ export default function Article() {
             Just like Galaxy Sprint, this is another game which I'd come up with numerous ideas for reworks but never followed through on any.
             Although in writing this and remembering some of the rework ideas I had come up with, I think this is probably the game with the most potential for me to update in the future.
           </p>} images={[
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/darkening/1.png`, alt: "Screenshot 1 of Darkening", caption: "Camera system displaying Camera 7" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/darkening/2.png`, alt: "Screenshot 2 of Darkening", caption: "Peering out the door of the bedroom" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/darkening/3.png`, alt: "Screenshot 3 of Darkening", caption: "Camera system displaying Camera 1" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/darkening/4.png`, alt: "Screenshot 4 of Darkening", caption: "Camera system displaying Camera 2" }
+          { src: `${ARTICLES_URL}/darkening/1.png`, alt: "Screenshot 1 of Darkening", caption: "Camera system displaying Camera 7" },
+          { src: `${ARTICLES_URL}/darkening/2.png`, alt: "Screenshot 2 of Darkening", caption: "Peering out the door of the bedroom" },
+          { src: `${ARTICLES_URL}/darkening/3.png`, alt: "Screenshot 3 of Darkening", caption: "Camera system displaying Camera 1" },
+          { src: `${ARTICLES_URL}/darkening/4.png`, alt: "Screenshot 4 of Darkening", caption: "Camera system displaying Camera 2" }
         ]} imageRight={true} />
 
         <p className="subsectionHeading">Installment 4 - Forlorn</p>
@@ -576,12 +579,12 @@ export default function Article() {
             However I think overall everything else about the game makes up for that in my opinion.
             So far this is probably my favorite game I've completed, since I think I really did well on the artstyle and overall feel of the game.
           </p>} images={[
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/forlorn/1.png`, alt: "Screenshot 1 of Forlorn", caption: "Intro cutscene dialogue" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/forlorn/2.png`, alt: "Screenshot 2 of Forlorn", caption: "Entering pizza shop building" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/forlorn/3.png`, alt: "Screenshot 3 of Forlorn", caption: "Skill tree UI" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/forlorn/4.png`, alt: "Screenshot 4 of Forlorn", caption: "Job management UI" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/forlorn/5.png`, alt: "Screenshot 5 of Forlorn", caption: "Cops safety event" },
-          { src: `${import.meta.env.BASE_URL}/articles/devChronicles/images/forlorn/6.png`, alt: "Screenshot 6 of Forlorn", caption: "Snowstorm safety event" }
+          { src: `${ARTICLES_URL}/forlorn/1.png`, alt: "Screenshot 1 of Forlorn", caption: "Intro cutscene dialogue" },
+          { src: `${ARTICLES_URL}/forlorn/2.png`, alt: "Screenshot 2 of Forlorn", caption: "Entering pizza shop building" },
+          { src: `${ARTICLES_URL}/forlorn/3.png`, alt: "Screenshot 3 of Forlorn", caption: "Skill tree UI" },
+          { src: `${ARTICLES_URL}/forlorn/4.png`, alt: "Screenshot 4 of Forlorn", caption: "Job management UI" },
+          { src: `${ARTICLES_URL}/forlorn/5.png`, alt: "Screenshot 5 of Forlorn", caption: "Cops safety event" },
+          { src: `${ARTICLES_URL}/forlorn/6.png`, alt: "Screenshot 6 of Forlorn", caption: "Snowstorm safety event" }
         ]} imageRight={true} />
 
         <p className="subsectionHeading">Installment 5 - Tank Strike</p>
