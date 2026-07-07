@@ -1,5 +1,6 @@
 @use "utilities.scss";
 @use "colors.scss";
+@use "universal.scss";
 
 #content {
     width: 100%;
@@ -197,9 +198,24 @@ figure {
     background-color: rgba(colors.$background3, 0.25);
 }
 
-@media (max-width: 1100px) {
+@media (max-width: universal.$mobileWidth) {
     .article-layout {
-        grid-template-columns: 1fr;
+        width: 100% !important;
+        margin: 0px 0px 0px 0px !important;
+        grid-template-columns: 1fr !important;
+
+        & > main {
+            margin: 0px 10px 10px 10px !important;
+        }
+    }
+
+    #header-images {
+        width: 100%;
+        margin-left: 0px;
+
+        & > img {
+            top: 0px;
+        }
     }
 
     .article-sidebar {

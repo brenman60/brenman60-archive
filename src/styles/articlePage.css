@@ -7,6 +7,7 @@
 
 .row p {
   font-size: 1.5em;
+  flex-wrap: wrap;
 }
 
 .rowTextImage {
@@ -176,6 +177,27 @@
     grid-template-columns: 1fr;
   }
 }
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: normal;
+  color: #EDEDED;
+}
+
+#root {
+  margin-bottom: 150px;
+  font-size: 75%;
+}
+
+html {
+  background-color: #131313;
+  overflow-y: scroll;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
 #content {
   width: 100%;
   margin: auto;
@@ -294,8 +316,7 @@ figure img {
 
 .article-sidebar {
   background-color: rgba(39, 39, 39, 0.15);
-  -webkit-backdrop-filter: blur(6px);
-          backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
   border-width: 1px;
   border-color: rgba(49, 49, 49, 0.5);
   border-style: solid;
@@ -361,9 +382,21 @@ figure img {
   background-color: rgba(39, 39, 39, 0.25);
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1250px) {
   .article-layout {
-    grid-template-columns: 1fr;
+    width: 100% !important;
+    margin: 0px 0px 0px 0px !important;
+    grid-template-columns: 1fr !important;
+  }
+  .article-layout > main {
+    margin: 0px 10px 10px 10px !important;
+  }
+  #header-images {
+    width: 100%;
+    margin-left: 0px;
+  }
+  #header-images > img {
+    top: 0px;
   }
   .article-sidebar {
     display: none;

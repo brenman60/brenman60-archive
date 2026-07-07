@@ -16,6 +16,10 @@ $navHeight: $navHeightRaw + px;
   white-space: nowrap;
 }
 
+#headerNav {
+  z-index: 150;
+}
+
 .navLink {
   color: colors.$text;
   padding-left: 35px;
@@ -29,6 +33,12 @@ $navHeight: $navHeightRaw + px;
   border-bottom: colors.$heading;
   border-bottom-style: solid;
   border-bottom-width: 0px;
+
+  z-index: 110;
+
+  &.active {
+    border-bottom-width: 3px;
+  }
 }
 
 #nav .navLink:hover {
@@ -55,12 +65,6 @@ $navHeight: $navHeightRaw + px;
   display: none;
 }
 
-@media (min-width: universal.$mobileWidth) {
-  .navLink.active {
-    border-bottom-width: 3px;
-  }
-}
-
 @media (max-width: universal.$mobileWidth) {
   // Mobile
   #nav {
@@ -72,17 +76,13 @@ $navHeight: $navHeightRaw + px;
     height: auto;
     margin-top: $navHeight;
     overflow: hidden;
-    border: none;
     pointer-events: none;
   }
 
   .navLink {
     display: block;
-    background-color: colors.$background2;
+    background-color: colors.$background4;
     z-index: 1;
-
-    border-width: 0px;
-    border: none;
   }
 
   #nav .navLink {
@@ -93,13 +93,13 @@ $navHeight: $navHeightRaw + px;
     padding-bottom: 15px;
 
     left: 100vw;
-    opacity: 0%;
+    opacity: 0;
     pointer-events: none;
   }
 
   #nav .navLink.visible {
     left: 0;
-    opacity: 100%;
+    opacity: 1;
     pointer-events: all;
   }
 
@@ -111,7 +111,9 @@ $navHeight: $navHeightRaw + px;
     height: $navHeight;
     width: $navHeight;
     aspect-ratio: 1 / 1;
-    font-size: 1.25em;
+    font-size: 2.5em;
+    background-color: transparent;
+    border: none;
     color: colors.$text;
     align-items: center;
     justify-content: center;
