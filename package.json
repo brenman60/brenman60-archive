@@ -11,6 +11,7 @@
     "deploy": "gh-pages -d dist",
     "prebuild": "node tools/generateArticlesIndex.js",
     "generate:articles-index": "node tools/generateArticlesIndex.js",
+    "generate:read-times": "node tools/generateReadTimes.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },

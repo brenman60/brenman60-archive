@@ -33,6 +33,7 @@ body {
   text-align: center;
   font-weight: 400;
   font-size: 2em;
+  width: 90%;
 }
 
 #recentArticlesTitle {
@@ -141,7 +142,6 @@ body {
 @media (max-width: 1250px) {
   #description {
     margin-top: 150px;
-    width: 90%;
   }
   #recentArticles > input {
     width: 85%;

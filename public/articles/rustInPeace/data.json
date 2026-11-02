@@ -1,13 +1,14 @@
 {
-    "title": "Megadeth - Rust In Peace",
-    "date": "January 13, 2026",
-    "formattedDate": "01/13/2026",
-    "author": "brenman60",
-    "type": "review",
-    "subType": "music",
-    "summary": "",
-    "coverImage": "/articles/rustInPeace/images/coverImage.jpg",
-    "rating": "85",
-    "showSidebar": false,
-    "show": false
+  "title": "Megadeth - Rust In Peace",
+  "date": "January 13, 2026",
+  "formattedDate": "01/13/2026",
+  "author": "brenman60",
+  "type": "review",
+  "subType": "music",
+  "summary": "",
+  "coverImage": "/articles/rustInPeace/images/coverImage.jpg",
+  "rating": "85",
+  "showSidebar": false,
+  "show": false,
+  "readTime": "2 min read"
 }

@@ -56,7 +56,7 @@ const HomePage = () => {
                 const inSummary = article.summary?.toLowerCase().includes(term);
                 const inTags = (article.tags || []).join(" ").toLowerCase().includes(term);
                 return inTitle || inSummary || inTags;
-              })
+              }).filter(article => article.show !== false)
               .sort((a, b) => {
                 const dateA = new Date(a.formattedDate);
                 const dateB = new Date(b.formattedDate);

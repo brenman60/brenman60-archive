@@ -153,6 +153,21 @@
     align-self: baseline;
 }
 
+.articleReadTime {
+    display: flex;
+    float: right;
+    margin: auto;
+    margin-right: 0px;
+    margin-bottom: 0px;
+
+    grid-column: 3;
+    grid-row: 2;
+
+    width: fit-content;
+    
+    align-self: baseline;
+}
+
 .articleTags {
     display: flex;
     height: auto;

@@ -6,7 +6,7 @@ async function main() {
     const repoRoot = path.resolve(".");
     const articlesDir = path.join(repoRoot, "public", "articles");
 
-    const exclusions = ["rustInPeace"];
+    const exclusions = [];
 
     const entries = await fs.readdir(articlesDir, { withFileTypes: true });
     const slugs = entries

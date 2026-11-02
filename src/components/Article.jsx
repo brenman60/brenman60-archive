@@ -13,6 +13,7 @@ const Article = (props) => {
         <h1 className="articleTitle">{article.title}</h1>
         <p className="articleSummary">{article.summary}</p>
         <p className="articleDate">{article.date}</p>
+        <p className="articleReadTime">{article.readTime}</p>
       </div>}
 
       {article.type == "review" &&
@@ -21,6 +22,7 @@ const Article = (props) => {
         <h1 className="articleTitle">{article.title}</h1>
         <p className={"articleRating rating-" + article.rating}>{article.rating + "%"}</p>
         <p className="articleDate">{article.date}</p>
+        <p className="articleReadTime">{article.readTime}</p>
       </div>}
     </div>
   );
