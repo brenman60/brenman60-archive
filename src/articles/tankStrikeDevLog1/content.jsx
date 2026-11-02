@@ -21,7 +21,7 @@ export default function Article() {
   }, []);
   
   const headerImages = [
-    { src: `${ARTICLES_URL}/brennansMiniGame/5.png`, alt: "Screenshot of Brennan's Mini Game" }
+    { src: `${ARTICLES_URL}/1.png`, alt: "alt text type temp" }
   ];
 
   return (
@@ -34,12 +34,16 @@ export default function Article() {
       <h1 id="title">Dev Log 1</h1>
       <main>
         <RowSeparator spacing={"50px"} />
-        <p className="sectionHeading">The Issue</p>
+        <p className="sectionHeading">Overview</p>
         <RowText>
           <p>
-            So recently I've been thinking about strategies for splitting up levels in Tank Strike into areas, which would allow for easier scaling in each level.
-            Previously, there were "areas" which were basically just objectives that players would have to complete to beat a level. It sounds pretty straightforward at first,
-            but it got kind of complicated when I started thinking about how I had partly programmed enemies AI to attack any objectives in the entire level.
+            Recently development of Tank Strike has been speeding up quite a bit and I felt like doing some sort of dev log to show and talk about some of the progress I've been making.
+            I've never done any dev logs before, so I'm not sure of the formatting or how to go about it or anything.
+          </p>
+
+          <p>
+            Getting into the new changes, the past month I've been primarily working on optimizations, fixes, and preparations for the next few features I'm planning.
+            
           </p>
         </RowText>
       </main>
